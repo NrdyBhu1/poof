@@ -1,0 +1,9 @@
+cc = gcc
+cflags = -I../include -Wall -std=c99
+libs = -lm -L.. -lpoof
+
+rule cc
+  command = ${cc} ${cflags} ${in} -o ${out} ${libs}
+  description = compiling ${in}
+
+build log: cc log.c

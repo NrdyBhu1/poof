@@ -1,0 +1,7 @@
+# glfw generic
+build ${obj}/glfw_init.obj: cc ${glfwRoot}/src/init.c
+build ${obj}/glfw_input.obj: cc ${glfwRoot}/src/input.c
+build ${obj}/glfw_vulkan.obj: cc ${glfwRoot}/src/vulkan.c
+build ${obj}/glfw_context.obj: cc ${glfwRoot}/src/context.c
+build ${obj}/glfw_monitor.obj: cc ${glfwRoot}/src/monitor.c
+build ${obj}/glfw_window.obj: cc ${glfwRoot}/src/window.c

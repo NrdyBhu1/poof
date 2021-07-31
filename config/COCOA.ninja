@@ -1,0 +1,4 @@
+# extension
+ex = .out
+
+platform_common = -framework Cocoa -framework IOKit -framework CoreFoundation

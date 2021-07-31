@@ -1,0 +1,4 @@
+# Release flags
+common = -march=native -mtune=native -Ofast -pipe ${platform_common} -Iinclude -Iinclude/external -Iglfw/include 
+cflags = ${common} -std=c99 -Wpedantic -Iinclude -Iinclude/external -D_GLFW_${platform}=1
+ldflags = ${common} -fno-pie -fdata-sections -ffunction-sections -static-libgcc -static-libstdc++ -s -Wl,--as-needed -Wl,--gc-sections

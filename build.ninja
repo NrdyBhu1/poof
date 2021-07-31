@@ -1,0 +1,15 @@
+include ./config.txt
+include ./config/${mode}.ninja
+include ./config/${platform}.ninja
+
+rule cc
+  command = ${cc} ${cflags} -c ${in} -o ${out} ${libs}
+  description = compiling ${in}
+
+rule ar
+  command = ar rcs ${out} ${in}
+  description = making static lib ${out}
+
+build ${obj}/poof_log.obj: cc src/poof_log.c
+build ${obj}/glad.obj: cc src/glad.c
+build libpoof.a: ar ${obj}/poof_log.obj ${obj}/glad.obj

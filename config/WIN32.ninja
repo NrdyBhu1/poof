@@ -1,0 +1,4 @@
+# extension
+ex = .exe
+
+platform_common = -lgdi32 -luser32 -lkernel32 -lopengl32

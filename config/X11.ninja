@@ -1,0 +1,4 @@
+# extension
+ex = .out
+
+platform_common = -L/usr/lib/x86_64-linux-gnu -lglfw -lm -lrt -lpthread -ldl -l:libGL.so.1 -lXi -lX11 -lXrandr

@@ -1,0 +1,14 @@
+# compiler
+cc = gcc
+
+# platform (X11, COCOA, WIN32)
+platform = X11
+
+# build dir
+out = bin
+
+# obj dir
+obj = .obj
+
+# modes (DEBUG, RELEASE)
+mode = DEBUG
