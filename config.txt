@@ -4,6 +4,9 @@ cc = gcc
 # platform (X11, COCOA, WIN32)
 platform = X11
 
+# glfw dir
+glfwRoot = glfw
+
 # build dir
 out = bin
 

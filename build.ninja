@@ -1,15 +1,22 @@
 include ./config.txt
 include ./config/${mode}.ninja
-include ./config/${platform}.ninja
 
 rule cc
   command = ${cc} ${cflags} -c ${in} -o ${out} ${libs}
   description = compiling ${in}
 
+rule ld
+  command = ${cc} ${in} -o ${out} ${libs}
+  description = linking ${in} to ${out}
+
 rule ar
   command = ar rcs ${out} ${in}
   description = making static lib ${out}
 
+
+include ./config/COMMON.ninja
+include ./config/${platform}.ninja
+
 build ${obj}/poof_log.obj: cc src/poof_log.c
 build ${obj}/glad.obj: cc src/glad.c
-build libpoof.a: ar ${obj}/poof_log.obj ${obj}/glad.obj
+build ${out}libpoof.a: ar ${obj}/poof_log.obj ${obj}/glad.obj
