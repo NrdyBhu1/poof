@@ -5,13 +5,14 @@
 extern "C" {
 #endif
 
-  typedef struct {
+typedef struct {
     GLuint VAO;
     GLuint VBO;
     GLuint IBO;
-  } POOF_Renderer;
+} POOF_Renderer;
   
-  extern void poofClearColor(float r, float g, float b, float a);
+extern void poofClearColor(float r, float g, float b, float a);
+extern void poofCreateRenderer();
   
 #if defined(__cplusplus)
 }
