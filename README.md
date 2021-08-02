@@ -7,6 +7,7 @@ Still in initial changes
 # Compiling the project
 ```sh
 $ git clone https://github.com/NrdyBhu1/poof.git
+$ git submodule update --init --recursive
 $ ninja
 ```
 This will create a static library in the bin folder. To run examples
