@@ -10,9 +10,10 @@ build ${obj}/glfw_cocoa_time.obj: cc ${glfwRoot}/src/cocoa_time.c
 build ${obj}/glfw_posix_thread.obj: cc ${glfwRoot}/src/posix_thread.c
 build ${obj}/glfw_nsgl_context.obj: cc ${glfwRoot}/src/nsgl_context.m
 build ${obj}/glfw_egl_context.obj: cc ${glfwRoot}/src/egl_context.c
+build ${obj}/glfw_osmesa_context.obj: cc ${glfwRoot}/src/osmesa_context.c
 
-build ${out}/glfw.a: ar $
+build ${out}/libglfw3.a: ar $
 ${obj}/glfw_init.obj ${obj}/glfw_input.obj ${obj}/glfw_vulkan.obj ${obj}/glfw_context.obj ${obj}/glfw_monitor.obj ${obj}/glfw_window.obj $
-${obj}/glfw_cocoa_init.obj ${obj}/glfw_cocoa_joystick.obj ${obj}/glfw_cocoa_monitor.obj ${obj}/glfw_cocoa_window.obj ${obj}/glfw_cocoa_time.obj ${obj}/glfw_posix_thread.obj ${obj}/glfw_nsgl_context.obj ${obj}/glfw_egl_context.obj
+${obj}/glfw_cocoa_init.obj ${obj}/glfw_cocoa_joystick.obj ${obj}/glfw_cocoa_monitor.obj ${obj}/glfw_cocoa_window.obj ${obj}/glfw_cocoa_time.obj ${obj}/glfw_posix_thread.obj ${obj}/glfw_nsgl_context.obj ${obj}/glfw_egl_context.obj ${obj}/glfw_osmesa_context
 
 platform_common = -framework Cocoa -framework IOKit -framework CoreFoundation

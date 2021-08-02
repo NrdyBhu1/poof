@@ -4,7 +4,7 @@ int main() {
     if (!poofInit())
       return -1;
 
-    POOF_Window* win = poofCreateWindow(600, 500, "Hello, World!");
+    POOF_Window* win = poofCreateWindow(600, 500, "Hello, World!", POOF_WINDOW_RESIZABLE|POOF_WINDOW_ALWAYS_ON_TOP);
     
     while (!poofWindowShouldClose(win)) {
         poofPollEvents();

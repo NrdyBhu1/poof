@@ -1,4 +1,4 @@
 # Debug flags
 common = -Og -g3 ${platform_common} -Iinclude -Iinclude/external -Iglfw/include 
 cflags = ${common} -std=c99 -Wpedantic -D_GLFW_${platform}=1
-ldflags = ${common} -lrt -lm -ldl ${platform_common}
+ldflags = ${common} -lrt -lm -ldl -lpthread ${platform_common}

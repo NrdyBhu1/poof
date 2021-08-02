@@ -10,10 +10,11 @@ build ${obj}/glfw_win32_thread.obj: cc ${glfwRoot}/src/win32_thread.c
 build ${obj}/glfw_win32_window.obj: cc ${glfwRoot}/src/win32_window.c
 build ${obj}/glfw_wgl_context.obj: cc ${glfwRoot}/src/wgl_context.c
 build ${obj}/glfw_egl_context.obj: cc ${glfwRoot}/src/egl_context.c
+build ${obj}/glfw_osmesa_context.obj: cc ${glfwRoot}/src/osmesa_context.c
 
-build ${out}/glfw.a: ar $
+build ${out}/libglfw3.a: ar $
 ${obj}/glfw_init.obj ${obj}/glfw_input.obj ${obj}/glfw_vulkan.obj ${obj}/glfw_context.obj ${obj}/glfw_monitor.obj ${obj}/glfw_window.obj $
 ${obj}/glfw_win32_init.obj ${obj}/glfw_win32_joystick.obj ${obj}/glfw_win32_monitor.obj ${obj}/glfw_win32_time.obj ${obj}/glfw_win32_thread.obj ${obj}/glfw_win32_window.obj $
-${obj}/glfw_wgl_context.obj ${obj}/glfw_egl_context.obj
+${obj}/glfw_wgl_context.obj ${obj}/glfw_egl_context.obj ${obj}/glfw_osmesa_context.obj
 
 platform_common = -lgdi32 -luser32 -lkernel32 -lopengl32

@@ -1,6 +1,6 @@
 cc = gcc
 cflags = -I../include -Wall -std=c99
-libs = -lm -L../bin -lpoof -lglfw -lm -lrt -ldl
+libs = -lm -L../bin -lpoof -lglfw3 -lm -lrt -ldl -lpthread
 
 rule cc
   command = ${cc} ${cflags} ${in} -o ${out} ${libs}
