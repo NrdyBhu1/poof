@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <POOF/poof_log.h>
 
 void poofLog(POOF_LogLeveL log_level, const char* message) {
@@ -14,12 +15,12 @@ void poofLog(POOF_LogLeveL log_level, const char* message) {
         printf("\x1b[0m \n");
                       } break;
       case LOG_FATAL: {
-        printf("\x1b[47m\x1b[31m\x1b[2m\x1b[4mERROR: ");
+        printf("\x1b[47m\x1b[31m\x1b[2m\x1b[4mFATAL ERROR: ");
         printf("%s", message);
         printf("\x1b[0m \n");
                       } break;
       case LOG_ERROR: {
-        printf("\x1b[1;31m\x1b[1m\x1b[1mFATAL ERROR: ");
+        printf("\x1b[1;31m\x1b[1m\x1b[1mERROR: ");
         printf("%s", message);
         printf("\x1b[0m \n");
                       } break;
