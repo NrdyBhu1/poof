@@ -21,6 +21,7 @@ build ${obj}/poof.obj: cc src/poof.c
 build ${obj}/poof_log.obj: cc src/poof_log.c
 build ${obj}/poof_window.obj: cc src/poof_window.c
 build ${obj}/poof_render.obj: cc src/poof_render.c
+build ${obj}/poof_input.obj: cc src/poof_input.c
 build ${obj}/glad.obj: cc src/glad.c
 build ${out}/libpoof.a: ar ${obj}/poof.obj ${obj}/poof_render.obj ${obj}/poof_window.obj ${obj}/poof_log.obj ${obj}/glad.obj
 
