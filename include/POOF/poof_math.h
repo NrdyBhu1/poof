@@ -1,3 +1,18 @@
+#ifndef POOF_MATH_H_
+#define POOF_MATH_H_
+
+typedef struct {
+    float x;
+    float y;
+    float w;
+    float h;
+} POOF_Rect;
+
+typedef struct {
+    float x;
+    float y;
+} POOF_Point;
+
 #ifndef POOF_BOOL_H_
 #define POOF_BOOL_H_
 
@@ -13,3 +28,5 @@ typedef enum {
 } POOF_Bool;
 
 #endif // POOF_BOOL_H_
+
+#endif // POOF_MATH_H_
